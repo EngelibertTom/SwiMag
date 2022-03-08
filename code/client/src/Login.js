@@ -7,8 +7,8 @@ function FormLogin(props) {
     return (
         <form onSubmit={props.onSignin}>
             <div>
-                <label>Username:</label>
-                <input type="text" id="username" autoComplete="off" ref={props.usernameRef}/>
+                <label>Email:</label>
+                <input type="text" id="email" autoComplete="off" ref={props.emailRef}/>
             </div>
             <div>
                 <label>Password:</label>
@@ -26,7 +26,7 @@ function FormLogin(props) {
 
 function Login() {
     const [cookies, setCookie, removeCookie] = useCookies(['login']);
-    const usernameRef = React.createRef();
+    const emailRef = React.createRef();
     const passwordRef = React.createRef();
 
     function disconnect() {
@@ -35,7 +35,7 @@ function Login() {
 
     async function onSignup() {
         const user = {
-            username: usernameRef.current.value,
+            email: emailRef.current.value,
             password: passwordRef.current.value
         };
         try {
@@ -52,7 +52,7 @@ function Login() {
     async function onSignin(e) {
         e.preventDefault();
         const user = {
-            username: e.target.username.value,
+            email: e.target.email.value,
             password: e.target.password.value
         };
         try {
@@ -69,13 +69,13 @@ function Login() {
     if (cookies.login && cookies.login.token) {
         return <button id="disconnect" onClick={disconnect}>disconnect</button>;
     }
-    return <FormLogin onSignin={onSignin} onSignup={onSignup} usernameRef={usernameRef} passwordRef={passwordRef}/>
+    return <FormLogin onSignin={onSignin} onSignup={onSignup} emailRef={emailRef} passwordRef={passwordRef}/>
 }
 
 function LocalProtectedRoute({children, ...rest}) {
-    if (rest.allCookies && rest.allCookies.login && rest.allCookies.login.username && rest.allCookies.login.token) {
+    if (rest.allCookies && rest.allCookies.login && rest.allCookies.login.email && rest.allCookies.login.token) {
         return (
-            React.cloneElement(children, {username: rest.allCookies.login.username, token: rest.allCookies.login.token})
+            React.cloneElement(children, {email: rest.allCookies.login.email, token: rest.allCookies.login.token})
         )
     }
     return <></>
@@ -86,7 +86,7 @@ function LocalProtectedRoute({children, ...rest}) {
  * @return {null}
  */
 function LocalProtectedLink({...rest}) {
-    if (rest.allCookies && rest.allCookies.login && rest.allCookies.login.username && rest.allCookies.login.token) {
+    if (rest.allCookies && rest.allCookies.login && rest.allCookies.login.email && rest.allCookies.login.token) {
         return <Link className={rest.className} to={rest.to}>cities</Link>
     } else {
         return null;
