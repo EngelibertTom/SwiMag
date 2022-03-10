@@ -1,0 +1,35 @@
+footer {
+    background-color: #03045E;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    min-height: 5.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-weight: lighter;
+}
+
+.liens_bas a {
+    color: white;
+    text-decoration: none;
+}
+
+.liens_bas a:hover {
+    text-decoration: underline;
+}
+
+.reseaux_bas a {
+    margin: 0.3rem 0.3rem;
+}
+
+.reseaux_bas {
+    display: flex;
+    align-items: center;
+    margin-left: 2rem;
+}

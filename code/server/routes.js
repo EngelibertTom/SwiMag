@@ -2,8 +2,9 @@ const express = require("express");
 const routes = express.Router();
 
 const sqlite3 = require('sqlite3').verbose();
-const db = new sqlite3.Database('data/ecoalDB.db');
+const db = new sqlite3.Database('data/ecoalDB');
 
+const verify=require('./connectionRouter').verify;
 module.exports = routes;
 
 routes
