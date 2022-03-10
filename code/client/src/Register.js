@@ -35,8 +35,6 @@ function Register() {
     const [cookies, setCookie, removeCookie] = useCookies(['register']);
     const emailRef = React.createRef();
     const passwordRef = React.createRef();
-    const usernameRef = React.createRef();
-    const imageRef = React.createRef();
 
     function disconnect() {
         removeCookie('register');
@@ -51,41 +49,13 @@ function Register() {
             const p = (await axios.post('http://localhost:8000/signup', user));
             if (p.status === 200) {
                 user.token = p.data.token;
-                setCookie('register', user, '/');
+                setCookie('login', user, '/');
             }
         } catch (err) {
             console.error(err)
         }
     }
-    if (cookies.register && cookies.register.token) {
-        return <button id="disconnect" onClick={disconnect}>disconnect</button>;
-    }
     return <FormRegister onSignup={onSignup} emailRef={emailRef} passwordRef={passwordRef}/>
 }
 
-function LocalProtectedRoute({children, ...rest}) {
-    if (rest.allCookies && rest.allCookies.register && rest.allCookies.register.email && rest.allCookies.register.token) {
-        return (
-            React.cloneElement(children, {email: rest.allCookies.register.email, token: rest.allCookies.register.token})
-        )
-    }
-    return <></>
-}
-
-
-/**
- * @return {null}
- */
-function LocalProtectedLink({...rest}) {
-    if (rest.allCookies && rest.allCookies.register && rest.allCookies.register.email && rest.allCookies.register.token) {
-        return <Link className={rest.className} to={rest.to}>Home</Link>
-    } else {
-        return null;
-    }
-}
-
-const ProtectedRoute = withCookies(LocalProtectedRoute);
-const ProtectedLink = withCookies(LocalProtectedLink);
-
-export {ProtectedRoute, ProtectedLink};
 export default Register;
