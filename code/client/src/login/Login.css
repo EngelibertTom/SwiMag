@@ -1,0 +1,52 @@
+
+.flex {
+    display: flex;
+}
+.flex-center {
+    justify-content: center;
+
+}
+form  {
+    margin-top:157px;
+    text-align: center;
+    border: solid 1px #3E4898;
+    width:200px;
+    min-height:150px;
+    border-radius: 10px;
+    display:inline-block;
+
+
+}
+
+form label {
+    color:#3E4898;
+}
+
+form input {
+    border-radius: 10px;
+    border: solid 1px #3E4898;
+}
+
+form div {
+
+    margin-top: 50px;
+}
+
+form div:nth-child(1) {
+
+    margin-top: 25px;
+    margin-bottom:30px;
+}
+
+form div:nth-child(2) {
+    margin-top:10px;
+}
+form div:nth-child(3) {
+
+    margin-top: 30px;
+    margin-bottom:30px;
+}
+
+
+
+

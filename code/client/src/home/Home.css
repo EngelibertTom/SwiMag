@@ -1,4 +1,33 @@
-.Home_title {
-  color: #326273;
-  font-size: 4rem;
+
+
+h1 {
+  color:#3E4898;
+  font-size: 30px;
+  margin-left:10px;
+}
+
+.imagearticle {
+  width:360px;
+  height:190px;
+  background-color: #3E4898;
+  border-radius: 10px;
+  margin:0 auto;
+
+}
+
+.articles {
+  display: flex;
+
+}
+
+.articles div {
+  width: 170px;
+  height:100px;
+  border-radius: 10px;
+  background-color: #3E4898;
+  margin-left:10px;
+}
+
+.articles p {
+  margin-left:5px;
 }
