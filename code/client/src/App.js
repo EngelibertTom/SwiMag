@@ -1,6 +1,7 @@
 import {Route, Link, Routes} from "react-router-dom"
 import Home from "./home/Home";
 import Articles from "./articles/Articles";
+import Footer from "./footer/Footer";
 import Login, {ProtectedRoute} from "./Login";
 import Register from "./Register";
 import Search from "./Search";
@@ -24,6 +25,7 @@ function App() {
         <Route exact={true} path="/search" element={<Search/>}/>
         <Route path="*" element={() => <p>Page Not Found</p>} />
       </Routes>
+      <Footer />
     </>
 );
 }
