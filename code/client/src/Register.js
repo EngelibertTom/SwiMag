@@ -35,27 +35,27 @@ function Register() {
     const [cookies, setCookie, removeCookie] = useCookies(['register']);
     const emailRef = React.createRef();
     const passwordRef = React.createRef();
-
-    function disconnect() {
-        removeCookie('register');
-    }
+    const usernameRef = React.createRef();
+    const photoRef = React.createRef();
 
     async function onSignup() {
         const user = {
             email: emailRef.current.value,
-            password: passwordRef.current.value
+            password: passwordRef.current.value,
+            username: usernameRef.current.value,
+            photo: photoRef.current.value
         };
         try {
             const p = (await axios.post('http://localhost:8000/signup', user));
             if (p.status === 200) {
                 user.token = p.data.token;
-                setCookie('login', user, '/');
+                setCookie('register', user, '/');
             }
         } catch (err) {
             console.error(err)
         }
     }
-    return <FormRegister onSignup={onSignup} emailRef={emailRef} passwordRef={passwordRef}/>
+    return <FormRegister onSignup={onSignup} emailRef={emailRef} passwordRef={passwordRef} usernameRef={usernameRef} photoRef={photoRef}/>
 }
 
 export default Register;
