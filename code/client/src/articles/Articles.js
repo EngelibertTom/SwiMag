@@ -19,14 +19,14 @@ export default function Articles() {
    }, []);
 
    function displayMedia(type, url) {
-     return <img src={"http://localhost:8000/media/" +url} />
+     return <img src={"http://localhost:8000/media/" + url} />
    }
 
 
     return (
        <>
         <h1>
-            Articles !!
+            SWIMAG
         </h1>
           {data.map( x =>  <article key={x.id}>
                               <h1 className="Article_title">{x.title}</h1>

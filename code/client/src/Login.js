@@ -7,7 +7,7 @@ function FormLogin(props) {
     return (
         <form onSubmit={props.onSignin}>
             <div>
-                <label>Email:</label>
+                <label>email:</label>
                 <input type="text" id="email" autoComplete="off" ref={props.emailRef}/>
             </div>
             <div>
@@ -16,9 +16,6 @@ function FormLogin(props) {
             </div>
             <div>
                 <button type="submit" name="login">Login</button>
-                <button type="button" name="signup" onClick={props.onSignup}>
-                    Sign up
-                </button>
             </div>
         </form>
     );
@@ -31,22 +28,6 @@ function Login() {
 
     function disconnect() {
         removeCookie('login');
-    }
-
-    async function onSignup() {
-        const user = {
-            email: emailRef.current.value,
-            password: passwordRef.current.value
-        };
-        try {
-            const p = (await axios.post('http://localhost:8000/signup', user));
-            if (p.status === 200) {
-                user.token = p.data.token;
-                setCookie('login', user, '/');
-            }
-        } catch (err) {
-            console.error(err)
-        }
     }
 
     async function onSignin(e) {
@@ -69,7 +50,7 @@ function Login() {
     if (cookies.login && cookies.login.token) {
         return <button id="disconnect" onClick={disconnect}>disconnect</button>;
     }
-    return <FormLogin onSignin={onSignin} onSignup={onSignup} emailRef={emailRef} passwordRef={passwordRef}/>
+    return <FormLogin onSignin={onSignin} emailRef={emailRef} passwordRef={passwordRef}/>
 }
 
 function LocalProtectedRoute({children, ...rest}) {
@@ -87,14 +68,25 @@ function LocalProtectedRoute({children, ...rest}) {
  */
 function LocalProtectedLink({...rest}) {
     if (rest.allCookies && rest.allCookies.login && rest.allCookies.login.email && rest.allCookies.login.token) {
-        return <Link className={rest.className} to={rest.to}>cities</Link>
+        return <Link className={rest.className} to={rest.to}>{rest.children}</Link>
     } else {
         return null;
     }
 }
 
+
+function NotLocalProtectedLink({...rest}) {
+    if (!(rest.allCookies && rest.allCookies.login && rest.allCookies.login.email && rest.allCookies.login.token)) {
+        return <Link className={rest.className} to={rest.to}>{rest.children}</Link>
+    } else {
+        return null;
+    }
+}
+
+
 const ProtectedRoute = withCookies(LocalProtectedRoute);
 const ProtectedLink = withCookies(LocalProtectedLink);
+const NotProtectedLink = withCookies(NotLocalProtectedLink);
 
-export {ProtectedRoute, ProtectedLink};
+export {ProtectedRoute, ProtectedLink, NotProtectedLink};
 export default Login;

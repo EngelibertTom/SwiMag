@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 
 const sqlite3 = require('sqlite3').verbose();
-const db = new sqlite3.Database('db/data');
+const db = new sqlite3.Database('data/ecoalDB');
 
 const jwt = require('jsonwebtoken');
 
@@ -10,7 +10,7 @@ const jwt = require('jsonwebtoken');
 // si ok => next
 // sinon : retourner un code d'erreur au client
 function checkUserPassword(user, res, next) {
-    console.log("... recherche email=", user.email, " password=", user.password);
+    console.log("... recherche name=", user.email, " password=", user.password);
     db.get(
         'select 1 from user where email=? and password=?',
         [user.email, user.password],
@@ -50,9 +50,9 @@ function sendToken(req, res) {
     const token = jwt.sign({
         email: user.email,
         password: user.password
-    }, 'secret', { expiresIn: '1h' });
+    }, 'secret', {expiresIn: '1h'});
     console.log("send token", token);
-    res.status(200).json({ 'token': token });
+    res.status(200).json({'token': token});
 }
 
 // vérifier l'authenticité du l'entête pour tout accès sécurisé à l'API
@@ -124,5 +124,5 @@ router
         )
     });
 
-module.exports.verify = verify;
-module.exports.router = router;
+module.exports.verify=verify;
+module.exports.router=router;

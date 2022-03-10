@@ -3,7 +3,8 @@ const cors = require('cors');
 const morgan = require('morgan');
 const fileUpload = require('express-fileupload');
 const routes = require('./routes');
-// const connectionRouter = require('./connectionRouter').router;
+const connectionRouter = require('./connectionRouter').router;
+
 
 const app = express();
 const port = process.env.PORT || 8000;
@@ -19,12 +20,12 @@ app
         tempFileDir: '/tmp/'
     }))
     .use(routes)
+    .use(connectionRouter)
     .use((req, res) => {
         res.status(404);
         res.json({
             error: "Page not found"
         })
     })
-    // .use(connectionRouter)
     
     .listen(port, () => console.log('listening on port ' + port));
