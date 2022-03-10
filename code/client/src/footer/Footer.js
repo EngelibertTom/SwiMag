@@ -13,14 +13,14 @@ export default function Footer() {
     return(
 
     <footer>
-        <div class="footer container">
+        <div className="footer container">
             <nav class="liens_bas">
                 <a href=''>Sitemap</a>
                 <a href=''>Legal Notice</a>
                 <a href=''>Contact Us</a>
             </nav>
 
-            <nav class="reseaux_bas">
+            <nav className="reseaux_bas">
                 <a href=''><img src={twitter} alt='twitter' /></a>
                 <a href=''><img src={facebook} alt='facebook' /></a>
                 <a href=''><img src={insta} alt='instagram' /></a>
