@@ -41,39 +41,39 @@ export default function Home() {
             <div class="div_cat">
                 
                 <a href="" class="cat1">
-                    <span>News</span>
+                    News
                 </a>
 
                 <a href="" class="cat2">
-                    <span>How to swim ?</span>
+                    How to swim ?
                 </a>
 
                 <a href="" class="cat3">
-                    <span>discover our tips for better swimming</span>
+                    discover our tips for better swimming
                 </a>
 
                 <a href="" class="cat4">
-                    <span>Comptetitions</span>
+                    Comptetitions
                 </a>
 
                 <a href="" class="cat5">
-                    <span>World records</span>
+                    World records
                 </a>
 
                 <a href="" class="cat6">
-                    <span>Athlets</span>
+                    Athlets
                 </a>
                 
                 <a href="" class="cat7">
-                    <span>Awards</span>
+                    Awards
                 </a>
 
                 <a href="" class="cat">
-                    <span>Best men swimming</span>
+                    Best men swimming
                 </a>
 
                 <a href="" class="cat">
-                    <span>Best women swimming</span>
+                    Best women swimming
                 </a>
             </div>
 
