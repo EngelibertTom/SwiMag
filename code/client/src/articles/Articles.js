@@ -28,7 +28,7 @@ export default function Articles() {
       <h1>
         SWIMAG
       </h1>
-      <div className='container-s'>
+      <div>
         {data.map(x => <article key={x.id}>
           <h1 className="Article_title">{x.title}</h1>
           <section dangerouslySetInnerHTML={{ __html: x.content }}></section>
