@@ -14,7 +14,7 @@ export default function Footer() {
 
     <footer>
         <div className="footer container">
-            <nav class="liens_bas">
+            <nav className="liens_bas">
                 <a href=''>Sitemap</a>
                 <a href=''>Legal Notice</a>
                 <a href=''>Contact Us</a>

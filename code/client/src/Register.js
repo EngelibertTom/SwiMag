@@ -7,28 +7,28 @@ import './Register.css'
 
 function FormRegister(props) {
     return (
-        <section class="login container">
+        <section className="login container">
             <h1>Register</h1>
-            <div class="login_form">
+            <div className="login_form">
                 <form onSubmit={props.onSignup}>
                     <div>
                         <label>Email:</label>
-                        <input class="input" type="text" id="email" autoComplete="off" ref={props.emailRef} required/>
+                        <input className="input" type="text" id="email" autoComplete="off" ref={props.emailRef} required/>
                     </div>
                     <div>
                         <label>Password:</label>
-                        <input class="input" type="password" name="password" autoComplete="off" ref={props.passwordRef} required/>
+                        <input className="input" type="password" name="password" autoComplete="off" ref={props.passwordRef} required/>
                     </div>
                     <div>
                         <label>Username:</label>
-                        <input class="input" type="text" name="username" autoComplete="off" ref={props.usernameRef} required/>
+                        <input className="input" type="text" name="username" autoComplete="off" ref={props.usernameRef} required/>
                     </div>
                     <div>
                         <label>Photo:</label>
-                        <div class="btn_photo"> <input class='btn' type="file" name="image" autoComplete="off" ref={props.imageRef} required/> </div>
+                        <div className="btn_photo"> <input className='btn' type="file" name="image" autoComplete="off" ref={props.imageRef} required/> </div>
                     </div>
-                    <div class="div_btn">
-                        <button class='btn' type="button" name="signup" onClick={props.onSignup}>Sign up</button>
+                    <div className="div_btn">
+                        <button className='btn' type="button" name="signup" onClick={props.onSignup}>Sign up</button>
                     </div>
                 </form>
             </div>

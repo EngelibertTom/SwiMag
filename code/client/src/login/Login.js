@@ -6,26 +6,26 @@ import './Login.css'
 
 function FormLogin(props) {
     return (
-        <section class="login container">
+        <section className="login container">
             <h1>Login</h1>
-            <div class="login_form">
+            <div className="login_form">
                 <form onSubmit={props.onSignin}>
                     <div>
                         <label>Email</label>
-                        <input class="input" type="text" id="email" autoComplete="off" ref={props.emailRef} />
+                        <input className="input" type="text" id="email" autoComplete="off" ref={props.emailRef} />
                     </div>
                     <div>
                         <label>Password:</label>
-                        <input class="input" type="password" name="password" autoComplete="off" ref={props.passwordRef} />
+                        <input className="input" type="password" name="password" autoComplete="off" ref={props.passwordRef} />
                     </div>
-                    <div class="div_btn">
-                        <button class='btn' type="submit" name="login">Login</button>
+                    <div className="div_btn">
+                        <button className='btn' type="submit" name="login">Login</button>
                     </div>
                 </form>
-                <a href="" class="mdp_perdu">Forgot password</a>
+                <a href="" className="mdp_perdu">Forgot password</a>
             </div>
 
-            <div class="div_cree_cpt"> <a href="/register" class="cree_cpt">You don’t have a account ? <br /> Click here</a> </div>
+            <div className="div_cree_cpt"> <a href="/register" className="cree_cpt">You don’t have a account ? <br /> Click here</a> </div>
         </section>
     );
 }
@@ -77,7 +77,7 @@ function LocalProtectedRoute({children, ...rest}) {
  */
 function LocalProtectedLink({...rest}) {
     if (rest.allCookies && rest.allCookies.login && rest.allCookies.login.email && rest.allCookies.login.token) {
-        return <Link className={rest.className} to={rest.to}>{rest.children}</Link>
+        return <Link className={rest.classNameName} to={rest.to}>{rest.children}</Link>
     } else {
         return null;
     }
@@ -86,7 +86,7 @@ function LocalProtectedLink({...rest}) {
 
 function NotLocalProtectedLink({...rest}) {
     if (!(rest.allCookies && rest.allCookies.login && rest.allCookies.login.email && rest.allCookies.login.token)) {
-        return <Link className={rest.className} to={rest.to}>{rest.children}</Link>
+        return <Link className={rest.classNameName} to={rest.to}>{rest.children}</Link>
     } else {
         return null;
     }
