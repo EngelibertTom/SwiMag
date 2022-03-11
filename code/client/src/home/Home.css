@@ -60,40 +60,17 @@
 
 /**/
 
-.div_cat {  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  gap: 1px 1px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "cat1 cat2 cat3"
-    "cat4 cat5 cat6"
-    "cat7 cat8 cat9";
+.div_cat {  
+  display: flex;
+  flex-wrap: wrap;
 }
-
-.cat1 { grid-area: cat1; }
-
-.cat2 { grid-area: cat2; }
-
-.cat3 { grid-area: cat3; }
-
-.cat4 { grid-area: cat4; }
-
-.cat5 { grid-area: cat5; }
-
-.cat6 { grid-area: cat6; }
-
-.cat7 { grid-area: cat7; }
-
-.cat8 { grid-area: cat8; }
-
-.cat9 { grid-area: cat9; }
 
 .div_cat a {
   border: 1px solid #3E4898;
   border-radius: 10px;
   padding: 0.3rem;
   transition: 100ms;
+  margin: 0.2rem;
 }
 
 .div_cat a:hover {
