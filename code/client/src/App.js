@@ -5,6 +5,7 @@ import Footer from "./footer/Footer";
 import Login, {ProtectedRoute} from "./login/Login";
 import Register from "./register/Register";
 import Search from "./Search";
+import addArticle from "./addArticle";
 import './App.css';
 
 import logo from './images/Logo.png'
@@ -29,8 +30,14 @@ function App() {
           <a href="#" className="header-toogle-close"><img src={cross} width="30" alt="Fermer Menu" /></a>
   </div>
 
+<<<<<<< HEAD
   <nav className="header-menu">
       <div className="log_regi">
+=======
+  <nav class="header-menu">
+      <div class="log_regi">
+        <Link className="nav-link" to={"/addArticle"}>Add Articles </Link> <span>/</span>
+>>>>>>> 8ab22427f2ec4887a42f70aa8f93ec1ffdc36594
         <Link className="nav-link" to={"/login"}>Login </Link> <span>/</span>
         <Link className="nav-link" to={"/register"}>Register</Link> <img src={co} alt="" />
       </div>
