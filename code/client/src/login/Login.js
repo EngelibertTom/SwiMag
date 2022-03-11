@@ -6,22 +6,27 @@ import './Login.css'
 
 function FormLogin(props) {
     return (
-        <div className='flex flex-center'>
-        <form onSubmit={props.onSignin}>
+        <section class="login container">
             <h1>Login</h1>
-            <div>
-                <label>Email</label>
-                <input type="text" id="email" autoComplete="off" ref={props.emailRef}/>
+            <div class="login_form">
+                <form onSubmit={props.onSignin}>
+                    <div>
+                        <label>Email</label>
+                        <input class="input" type="text" id="email" autoComplete="off" ref={props.emailRef} />
+                    </div>
+                    <div>
+                        <label>Password:</label>
+                        <input class="input" type="password" name="password" autoComplete="off" ref={props.passwordRef} />
+                    </div>
+                    <div class="div_btn">
+                        <button class='btn' type="submit" name="login">Login</button>
+                    </div>
+                </form>
+                <a href="" class="mdp_perdu">Forgot password</a>
             </div>
-            <div>
-                <label>Password:</label>
-                <input type="password" name="password" autoComplete="off" ref={props.passwordRef}/>
-            </div>
-            <div>
-                <button type="submit" name="login">Login</button>
-            </div>
-        </form>
-        </div>
+
+            <div class="div_cree_cpt"> <a href="" class="cree_cpt">You don’t have a account ? <br /> Click here</a> </div>
+        </section>
     );
 }
 

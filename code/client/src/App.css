@@ -1,1 +1,26 @@
- 
+ h1 {
+     color: #3E4898;
+     font-weight: normal;
+ }
+
+ a {
+     text-decoration: none;
+     color: black;
+ }
+
+ /* Aspect des input*/
+
+ .input {
+     border-radius: 10px;
+     border: solid 1px #3E4898;
+     padding: 0.3rem 0.5rem;
+ }
+
+ .btn {
+     background: #3E4898;
+     border: 0.1px solid #3E4898;
+     border-radius: 17px;
+     color: white;
+     padding: 0.5rem 3rem;
+     width: fit-content;
+ }
