@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import axios from "axios"
+import "./Articles.css";
 
 export default class AddArticle extends Component {
     constructor(props) {
@@ -60,33 +61,40 @@ export default class AddArticle extends Component {
 
     render() {
         return (
-            <div>
+            <div className="flex flex-center">
                 <form>
+                    <br></br>
+                    TOPIC<br></br>
                     <input type="text"
                         name="title"
-                        placeholder="Add A New Article"
+                        className="inputArticle" placeholder="Input Topic"
                         ref={(input) => { this.inputToFocus = input }}
                         value={this.state.title}
                         onChange={this.handleChange}
-                    /><br />
-                    <input type="text"
-                        name="content"
-                        placeholder="Add Content"
+                    /><br /><br></br>
+
+                    CONTENT<br></br>
+                    <textarea name="content"
+                        rows="6" cols="30" placeholder="Add Content"
                         value={this.state.content}
                         onChange={this.handleChange}
-                    /><br />
+                    /><br /><br></br>
+                    
+                    THUMBNAIL<br></br>
                     <input type="text"
                         name="thumbnailUrl"
-                        placeholder="Add A thumbnail"
+                        className="inputArticle" placeholder="Add A thumbnail"
                         value={this.state.thumbnailUrl}
                         onChange={this.handleChange}
-                    /><br />
+                    /><br /><br></br>
+
+                    MEDIA<br></br>
                     <input type="text"
                         name="mediaUrl"
-                        placeholder="Add MediaUrl"
+                        className="inputArticle" placeholder="Add MediaUrl"
                         value={this.state.mediaUrl}
                         onChange={this.handleChange}
-                    /><br />
+                    /><br /><br></br>
                     <button onClick={this.handleSubmit}>Submit</button>
                 </form>
             </div>

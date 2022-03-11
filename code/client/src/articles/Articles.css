@@ -3,3 +3,14 @@
   color: #CCAD8F;
   font-size: 3rem;
 }
+
+.articleInput{
+  width: 200px;
+}
+
+.flex {
+  display: flex;
+}
+.flex-center {
+  justify-content: center;
+}

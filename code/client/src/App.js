@@ -5,7 +5,7 @@ import Footer from "./footer/Footer";
 import Login, { ProtectedRoute } from "./login/Login";
 import Register from "./register/Register";
 import Search from "./Search";
-import AddArticle from "./addArticle";
+import AddArticle from "./articles/addArticle";
 import './App.css';
 
 import logo from './images/Logo.png'
