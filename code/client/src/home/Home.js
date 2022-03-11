@@ -6,33 +6,33 @@ export default function Home() {
     return (
 
     <section class="home container">
-        <div class="article_une">
+        <a href="" class="article_une">
             <h1 class="titre">Main article name</h1>
             <img class="img" src={image} alt="" />
             <span class="desc"> Description : Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam congue pretium eros. Fusce volutpat libero ligula, ut luctus felis ornare a. Nullam varius, sem quis eleifend feugiat, lectus justo hendrerit dolor, nec placerat velit leo id massa.</span>
-        </div>
+        </a>
 
         <div class="dernier_articles">
             <div class="div_titre_last"> <img class="titre_img" src={fleche} alt="" /><h2 class="titre">Last articles : </h2> </div>
-            <div class="article">
+            <a href="" class="article">
                 <img src={image} alt="" />
                 <span class="desc">Description : Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
-            </div>
+            </a>
 
-            <div class="article">
+            <a href="" class="article">
                 <img src={image} alt="" />
                 <span class="desc">Description : Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
-            </div>
+            </a>
 
-            <div class="article">
+            <a href="" class="article">
                 <img src={image} alt="" />
                 <span class="desc">Description : Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
-            </div>
+            </a>
 
-            <div class="article">
+            <a href="" class="article">
                 <img src={image} alt="" />
                 <span class="desc">Description : Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
-            </div>
+            </a>
         </div>
 
         <div class="categories">
