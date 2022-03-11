@@ -3,7 +3,7 @@ import Home from "./home/Home";
 import Articles from "./articles/Articles";
 import Footer from "./footer/Footer";
 import Login, {ProtectedRoute} from "./login/Login";
-import Register from "./Register";
+import Register from "./register/Register";
 import Search from "./Search";
 import './App.css';
 
@@ -17,40 +17,40 @@ function App() {
   return (
       <>
 
-<header class="header container" id="main-header">
+<header className="header container" id="main-header">
 
-  <div class="div_logo">
-    <Link class="flex_logo" to="/"> <img class="img_logo" src={logo} alt="Logo" /> <span class="nom_logo">SwiMag</span></Link>
-    <Link className="nav-link" to={"/search"}> <img class="img_loupe" src={loupe} alt="Loupe" /> </Link>
+  <div className="div_logo">
+    <Link className="flex_logo" to="/"> <img className="img_logo" src={logo} alt="Logo" /> <span className="nom_logo">SwiMag</span></Link>
+    <Link className="nav-link" to={"/search"}> <img className="img_loupe" src={loupe} alt="Loupe" /> </Link>
   </div>
       
-  <div class="header-toogle">
-          <a href="#main-header" class="header-toogle-open"><img src={menu} width="30" alt="Ouvrir Menu" /></a>
-          <a href="#" class="header-toogle-close"><img src={cross} width="30" alt="Fermer Menu" /></a>
+  <div className="header-toogle">
+          <a href="#main-header" className="header-toogle-open"><img src={menu} width="30" alt="Ouvrir Menu" /></a>
+          <a href="#" className="header-toogle-close"><img src={cross} width="30" alt="Fermer Menu" /></a>
   </div>
 
-  <nav class="header-menu">
-      <div class="log_regi">
+  <nav className="header-menu">
+      <div className="log_regi">
         <Link className="nav-link" to={"/login"}>Login </Link> <span>/</span>
         <Link className="nav-link" to={"/register"}>Register</Link> <img src={co} alt="" />
       </div>
 
-        <span class="haut_titre_cat">Categories : </span>
-        <Link class="haut_gras" to="/articles">News</Link>
-          <span class="haut_trait"></span>
+        <span className="haut_titre_cat">Categories : </span>
+        <Link className="haut_gras" to="/articles">News</Link>
+          <span className="haut_trait"></span>
 
-        <Link class="haut_gras" to="/">How to swim ?</Link>
-        <Link class="haut_cat" to="/">discover our tips for better swimming</Link>
-          <span class="haut_trait"></span>
+        <Link className="haut_gras" to="/">How to swim ?</Link>
+        <Link className="haut_cat" to="/">discover our tips for better swimming</Link>
+          <span className="haut_trait"></span>
 
-        <Link class="haut_gras" to="/">Comptetitions</Link>
-        <Link class="haut_cat" to="/">World records</Link>
-        <Link class="haut_cat" to="/">Athlets</Link>
-          <span class="haut_trait"></span>
+        <Link className="haut_gras" to="/">Comptetitions</Link>
+        <Link className="haut_cat" to="/">World records</Link>
+        <Link className="haut_cat" to="/">Athlets</Link>
+          <span className="haut_trait"></span>
 
-        <Link class="haut_gras" to="/">Awards</Link>
-        <Link class="haut_cat" to="/">Best men swimming</Link>
-        <Link class="haut_cat" to="/">Best women swimming</Link>
+        <Link className="haut_gras" to="/">Awards</Link>
+        <Link className="haut_cat" to="/">Best men swimming</Link>
+        <Link className="haut_cat" to="/">Best women swimming</Link>
   </nav>
 
 </header>
