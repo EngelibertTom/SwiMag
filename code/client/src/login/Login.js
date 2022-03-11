@@ -2,12 +2,15 @@ import React from 'react';
 import axios from "axios";
 import {Link} from 'react-router-dom';
 import {useCookies, withCookies} from 'react-cookie';
+import './Login.css'
 
 function FormLogin(props) {
     return (
+        <div className='flex flex-center'>
         <form onSubmit={props.onSignin}>
+            <h1>Login</h1>
             <div>
-                <label>email:</label>
+                <label>Email</label>
                 <input type="text" id="email" autoComplete="off" ref={props.emailRef}/>
             </div>
             <div>
@@ -18,6 +21,7 @@ function FormLogin(props) {
                 <button type="submit" name="login">Login</button>
             </div>
         </form>
+        </div>
     );
 }
 

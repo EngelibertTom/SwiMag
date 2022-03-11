@@ -31,6 +31,9 @@ form div {
 
     margin-top: 50px;
 }
+form h1 {
+    font-weight: normal;
+}
 
 form div:nth-child(1) {
 
