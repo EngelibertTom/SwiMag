@@ -64,4 +64,19 @@ routes
 
             })
         })
+        
+        db.run('INSERT INTO users(username,password,email) VALUES (?,?,?)', 
+        [req.body.username, req.body.password, req.body.email], (err) => {
+            if (err) {
+                console.log("An Error has occured")
+                return res.status(500).json(err);
+            }
+            console.log("successful")
+            res.status(200).json({
+                success: "true",
+                message: "article successful",
+
+            })
+        })
+        
     })

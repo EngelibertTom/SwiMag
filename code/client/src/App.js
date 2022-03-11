@@ -1,11 +1,11 @@
 import {Route, Link, Routes} from "react-router-dom"
 import Home from "./home/Home";
 import Articles from "./articles/Articles";
-import Footer from "./footer/Footer";
 import Login, {ProtectedRoute} from "./login/Login";
-import Register from "./Register";
+import Register from "./register/Register";
 import Search from "./Search";
 import AddArticle from "./addArticle";
+import Footer from "./footer/Footer";
 import './App.css';
 
 function App() {
@@ -27,9 +27,10 @@ function App() {
           <Route exact={true} path="/search" element={<Search/>}/>
           <Route exact={true} path="/addArticle" element={<AddArticle/>}/>
           <Route path="*" element={() => <p>Page Not Found</p>} />
-        </Routes>
-        <Footer />
+        </Routes> 
+      <Footer />
       </>
+      
   );
 }
 
