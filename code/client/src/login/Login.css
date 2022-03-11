@@ -26,6 +26,23 @@
     text-align: center;
 }
 
+.disconnect {
+    color: black;
+    background-color: white;
+    border-color:#3E4898;
+    border-radius: 7px;
+    margin-left: 40%;
+    margin-top: 10%;
+    margin-bottom: 8%;
+    padding: 5px;
+    transition-duration: 1s;
+}
+
+.disconnect:hover{
+    background-color: #3E4898;
+}
+
+
 .mdp_perdu {
     color: #3E4898;
 }

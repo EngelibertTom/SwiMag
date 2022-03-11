@@ -40,39 +40,39 @@ export default function Home() {
 
             <div className="div_cat">
                 
-                <a href="" class="cat1">
+                <a href="" className="cat1">
                     News
                 </a>
 
-                <a href="" class="cat2">
+                <a href="" className="cat2">
                     How to swim ?
                 </a>
 
-                <a href="" class="cat3">
+                <a href="" className="cat3">
                     discover our tips for better swimming
                 </a>
 
-                <a href="" class="cat4">
+                <a href="" className="cat4">
                     Comptetitions
                 </a>
 
-                <a href="" class="cat5">
+                <a href="" className="cat5">
                     World records
                 </a>
 
-                <a href="" class="cat6">
+                <a href="" className="cat6">
                     Athlets
                 </a>
                 
-                <a href="" class="cat7">
+                <a href="" className="cat7">
                     Awards
                 </a>
 
-                <a href="" class="cat">
+                <a href="" className="cat">
                     Best men swimming
                 </a>
 
-                <a href="" class="cat">
+                <a href="" className="cat">
                     Best women swimming
                 </a>
             </div>
