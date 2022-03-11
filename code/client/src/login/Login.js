@@ -25,7 +25,7 @@ function FormLogin(props) {
                 <a href="" class="mdp_perdu">Forgot password</a>
             </div>
 
-            <div class="div_cree_cpt"> <a href="" class="cree_cpt">You don’t have a account ? <br /> Click here</a> </div>
+            <div class="div_cree_cpt"> <a href="/register" class="cree_cpt">You don’t have a account ? <br /> Click here</a> </div>
         </section>
     );
 }

@@ -2,32 +2,37 @@ import React from 'react';
 import axios from "axios";
 import {Link} from 'react-router-dom';
 import {useCookies, withCookies} from 'react-cookie';
+import './login/Login.css'
+import './Register.css'
 
 function FormRegister(props) {
     return (
-        <form onSubmit={props.onSignup}>
-            <div>
-                <label>Email:</label>
-                <input type="text" id="email" autoComplete="off" ref={props.emailRef} required/>
+        <section class="login container">
+            <h1>Register</h1>
+            <div class="login_form">
+                <form onSubmit={props.onSignup}>
+                    <div>
+                        <label>Email:</label>
+                        <input class="input" type="text" id="email" autoComplete="off" ref={props.emailRef} required/>
+                    </div>
+                    <div>
+                        <label>Password:</label>
+                        <input class="input" type="password" name="password" autoComplete="off" ref={props.passwordRef} required/>
+                    </div>
+                    <div>
+                        <label>Username:</label>
+                        <input class="input" type="text" name="username" autoComplete="off" ref={props.usernameRef} required/>
+                    </div>
+                    <div>
+                        <label>Photo:</label>
+                        <div class="btn_photo"> <input class='btn' type="file" name="image" autoComplete="off" ref={props.imageRef} required/> </div>
+                    </div>
+                    <div class="div_btn">
+                        <button class='btn' type="button" name="signup" onClick={props.onSignup}>Sign up</button>
+                    </div>
+                </form>
             </div>
-            <div>
-                <label>Password:</label>
-                <input type="password" name="password" autoComplete="off" ref={props.passwordRef} required/>
-            </div>
-            <div>
-                <label>Username:</label>
-                <input type="text" name="username" autoComplete="off" ref={props.usernameRef} required/>
-            </div>
-            <div>
-                <label>Photo:</label>
-                <input type="file" name="image" autoComplete="off" ref={props.imageRef} required/>
-            </div>
-            <div>
-                <button type="button" name="signup" onClick={props.onSignup}>
-                    Sign up
-                </button>
-            </div>
-        </form>
+        </section>
     );
 }
 
