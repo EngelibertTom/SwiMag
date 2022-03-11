@@ -23,4 +23,10 @@
      color: white;
      padding: 0.5rem 3rem;
      width: fit-content;
+     transition: 100ms;
+     cursor: pointer;
+ }
+ .btn:hover {
+    background-color: #03045E;
+    transition: 100ms;
  }
