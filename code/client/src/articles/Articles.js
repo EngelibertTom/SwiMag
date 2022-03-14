@@ -19,9 +19,16 @@ export default function Articles() {
   }, []);
 
   function displayMedia(type, url) {
-    return <img src={"http://localhost:8000/media/" + url} />
+    return <div><img className="img" src={"http://localhost:8000/media/" + url} /></div>
   }
 
+
+  async function del(event) {
+    let id = event.target.id
+    console.log("refresh begi")
+    const data = (await axios.delete('http://localhost:8000/articles/27' + id)).data;
+    //setData(data);
+  }
 
   return (
     <>
@@ -31,10 +38,11 @@ export default function Articles() {
       <div>
         {data.map(x => <article key={x.id}>
           <h1 className="Article_title">{x.title}</h1>
-          <section dangerouslySetInnerHTML={{ __html: x.content }}></section>
+          <section dangerouslySetInnerHTML={{ __html: x.content }}></section><br></br>
           {displayMedia(x.mediaType, x.mediaURL)}
-
-          <h1>Read more</h1>
+          <div className="text"><a href='/ArticleOne'>Read More</a></div>
+          <button className="delete" id={x.id} onClick={del}>Delete</button>
+          <hr></hr>
         </article>
         )}
       </div>

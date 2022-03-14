@@ -22,7 +22,7 @@ function Search(props) {
     }, []);
 
     function displayMedia(type, url) {
-        return <img src={"http://localhost:8000/media/" + url} />
+        return <div><img className="img" src={"http://localhost:8000/media/" + url} /></div>
     }
 
     function filterContent(data, searchTerm) {

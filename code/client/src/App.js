@@ -6,6 +6,8 @@ import Login, { ProtectedRoute } from "./login/Login";
 import Register from "./register/Register";
 import Search from "./Search";
 import AddArticle from "./articles/addArticle";
+import ArticleOne from "./articles/ArticleOne";
+import ArticleTwo from "./articles/ArticleTwo";
 import './App.css';
 
 import logo from './images/Logo.png'
@@ -64,6 +66,8 @@ function App() {
         <Route exact={true} path="/register" element={<Register />} />
         <Route exact={true} path="/search" element={<Search />} />
         <Route exact={true} path="/addArticle" element={<AddArticle/>}/>
+        <Route exact={true} path="/articleOne" element={<ArticleOne/>}/>
+        <Route exact={true} path="/articleTwo" element={<ArticleTwo/>}/>
         <Route path="*" element={() => <p>Page Not Found</p>} />
       </Routes>
       <Footer />

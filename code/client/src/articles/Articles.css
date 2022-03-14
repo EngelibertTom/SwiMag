@@ -14,3 +14,29 @@
 .flex-center {
   justify-content: center;
 }
+
+.img{
+  width: 373px !important;
+}
+
+
+.text{
+  color: black;
+  background-color: white;
+  border-color:#3E4898;
+  border-radius: 7px;
+  padding: 4px;
+
+}
+
+.delete {
+  color: black;
+  background-color: white;
+  border-color:#3E4898;
+  border-radius: 7px;
+  margin-left: 43%;
+  margin-top: 10%;
+  margin-bottom: 8%;
+  padding: 5px;
+  transition-duration: 1s;
+}

@@ -85,4 +85,18 @@ routes
                 })
             })
 
+            .delete("/articles/:id", (req, res) => {
+                let id = req.params.id;
+
+                db.run("delete from article where id=" + id,
+                    (err) => {
+                        if (err) {
+                            console.log("An Error has occured")
+                            return res.status(500).json(err);
+                        }
+                        console.log("successful")
+                        res.status(200).send()
+                    }
+                )
+            })
     })
